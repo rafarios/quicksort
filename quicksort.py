@@ -12,7 +12,8 @@ def printArray(arr):
 	#g = git.cmd.Git(git_dir)
 	#g.pull()
 	import subprocess
-	output = subprocess.check_output(["git", "commit -F README.MD"])
+	output = subprocess.check_output(["git", "push README.MD"])
+	#output = subprocess.check_output(["git", "commit -F README.MD"])
 	
 def partition(arr,low,high): 
 	i = ( low-1 )         # index of smaller element 
