@@ -1,5 +1,5 @@
 
-import subprocess
+#import subprocess
 
 def printArray(arr):
 	n = len(arr) 
@@ -9,8 +9,8 @@ def printArray(arr):
 		f.write(arr[i] + "\n")
 	print(" ")
 	f.close()
-	output = subprocess.check_output(['git', 'add README.md'])
-	output = subprocess.check_output(['git', 'commit -F "README.md updated"'])
+	#output = subprocess.run(['git', 'add README.md'])
+	#output = subprocess.run(['git', 'commit -F "README.md updated"'])
 
 def partition(arr,low,high): 
 	i = ( low-1 )         # index of smaller element 
