@@ -1,20 +1,17 @@
-#import git 
+
 import subprocess
 
 def printArray(arr):
 	n = len(arr) 
-	f = open("README.MD", "w")
+	f = open("README.md", "w")
 	for i in range(n): 
 		print (arr[i]) 
 		f.write(arr[i] + "\n")
 	print(" ")
 	f.close()
-	#g = git.cmd.Git(git_dir)
-	#g.pull()
-	import subprocess
-	output = subprocess.check_output(["git", "push README.MD"])
-	#output = subprocess.check_output(["git", "commit -F README.MD"])
-	
+	output = subprocess.check_output(['git', 'add README.md'])
+	output = subprocess.check_output(['git', 'commit -F "README.md updated"'])
+
 def partition(arr,low,high): 
 	i = ( low-1 )         # index of smaller element 
 	pivot = arr[high]     # pivot 
@@ -44,4 +41,3 @@ def quickSort(arr,low,high):
 arr = ["*****", "***", "************", "*************", "**", "*", "****", "*************************", "*********", "*****", "*********", "*******", "**"] 
 n = len(arr) 
 quickSort(arr,0,n-1) 
-
